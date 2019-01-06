@@ -13,7 +13,7 @@ public class AppServiceImpl implements IAppFromService {
     private AppFromDao appFromDao;
 
     @Override
-    public AppFrom getAppFromList() {
+    public List<AppFrom> getAppFromList() {
         return appFromDao.getAppFromList();
     }
 }

@@ -6,9 +6,8 @@
     <sql id = "items">FromId,StudentId,AppDate,AppType,AppDescribe,ApprStatus,
         Approver,ApprDate,ApprReason
     </sql>
-    <!--select-->
-    <select id="getAppFromList" resultType="int">
-        select FromId from <include refid="table"/> where FromId=1
+    <select id="getAppFromList" resultMap="appFromMap">
+        select * from <include refid="table"/> where 1=1
     </select>
     <resultMap id="appFromMap" type="com.dantes.StudentDormitoryManagement.model.AppFrom">
         <id column="FromId" property="fromId" jdbcType="INTEGER" />
@@ -17,7 +16,7 @@
         <result column="AppType" property="appType" jdbcType="INTEGER"/>
         <result column="AppDescribe" property="appDescribe" jdbcType="VARCHAR"/>
         <result column="ApprStatus" property="apprStatus" jdbcType="VARCHAR"/>
-        <result column="Approver" property="approver" jdbcType="VARCHAR"/>
+        <result column="Approver" property="apprOver" jdbcType="VARCHAR"/>
         <result column="ApprDate" property="apprDate" jdbcType="DATE"/>
         <result column="ApprReason" property="apprReason" jdbcType="VARCHAR"/>
     </resultMap>

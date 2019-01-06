@@ -14,7 +14,7 @@ public class AppFromInfo {
     private IAppFromService appFromService;
 
     @RequestMapping("/getAppFromList")
-    public AppFrom getAppFromList(){
+    public List<AppFrom> getAppFromList(){
         return appFromService.getAppFromList();
     }
 }

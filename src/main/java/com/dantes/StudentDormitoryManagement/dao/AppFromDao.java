@@ -2,9 +2,9 @@ package com.dantes.StudentDormitoryManagement.dao;
 
 import com.dantes.StudentDormitoryManagement.model.AppFrom;
 import org.apache.ibatis.annotations.Mapper;
+import java.util.List;
 
-//@Repository
 @Mapper
 public interface AppFromDao {
-    AppFrom getAppFromList();
+    List<AppFrom> getAppFromList();
 }
